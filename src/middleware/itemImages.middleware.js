@@ -27,7 +27,7 @@ const multerUpload = multer({
 			cb(error, false);
 		}
 	},
-	limits: { fileSize: 100 * 1024 * 1024 },
+	limits: { fileSize: 100 * 1024 },
 });
 
 // untuk middleware
