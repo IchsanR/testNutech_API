@@ -22,7 +22,7 @@ const multerUpload = multer({
 			cb(null, true);
 		} else {
 			const error = {
-				message: "file harus gambar",
+				message: "Format file harus .jpg atau .png",
 			};
 			cb(error, false);
 		}
@@ -36,7 +36,8 @@ const itemImages = (req, res, next) => {
 	multerSingle(req, res, (err) => {
 		if (err) {
 			res.json({
-				message: "File too large. Max 100KB",
+				message:
+					"Periksa format file pastikan format .jpg .png dan ukuran file harus 100KB",
 				error: err,
 			});
 		} else {
